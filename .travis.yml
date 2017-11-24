@@ -8,8 +8,8 @@ script:
   - echo "Branch($TRAVIS_BRANCH)"
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker build -t aanoaa/fake-pause .
-    docker push registry.theopencloset.net/aanoaa/fake-pause
+    docker build -t aanoaa/fake-pause .;
+    docker push registry.theopencloset.net/aanoaa/fake-pause;
     fi
 notifications:
   email: false
