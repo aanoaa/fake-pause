@@ -11,3 +11,5 @@ after_success:
     fi
 script:
   - echo "0"
+notifications:
+  email: false
