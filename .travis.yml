@@ -4,12 +4,12 @@ services:
   - docker
 # skipping installation step
 install: true
+script:
+  - echo "Branch($TRAVIS_BRANCH)"
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker build -t aanoaa/fake-pause .
     docker push registry.theopencloset.net/aanoaa/fake-pause
     fi
-script:
-  - echo "0"
 notifications:
   email: false
