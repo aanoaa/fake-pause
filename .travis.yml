@@ -7,7 +7,7 @@ install: true
 script:
   - echo "Branch($TRAVIS_BRANCH), Tag($TRAVIS_TAG)"
 after_success:
-  - if [ -z "$TRAVIS_TAG" ]; then
+  - if [ "$TRAVIS_TAG" ]; then
     docker build -t aanoaa/fake-pause .;
     docker push registry.theopencloset.net/aanoaa/fake-pause;
     fi
