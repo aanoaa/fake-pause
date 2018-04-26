@@ -15,15 +15,5 @@ after_success:
 notifications:
   irc:
     channels:
-      - "irc.silex.kr#silex"
-      - "irc.silex.kr:6667#silex"
-      - "irc://irc.silex.kr:6667#silex"
-      - "ircs://irc.silex.kr:6667#silex"
-      # - "chat.freenode.net#aanoaa"
-      # - "irc://irc.silex.kr#silex"
-      # - "ircs://irc.silex.kr#silex"
-    use_notice: true
-    skip_join: true
-    password:
-      secure: "JdXfozJWLUetmWr77SC3ObitAKg3V857rJkSajILzL9ujs6oxUPpubjcbrvkVyS596Qje2dhRmJ9mqrHSJ22waubqYWmOjX81aGRk3LRFxmbn3EdZzwKX49k7DNp7o8kM9PNmc4HLlI3FReiHbxI0MrmO5I0dPkrRbT8mt8qYt7vxK13AMki5s4r2zMIGmv0TCa3hjEKaPmW2CsOFjRDjytIQR+Qbz3l7eGJLGQb66akHqNgXV4UotL5c/qM2ywcK2Ogu/8MLzB/51wD72ht0/NFmVo4F/up2roh4j9ILF0wcDOkH18nJDisPhpcXGCNc7xhgy7nwvU1ebbf7hSSpj22G9wXPzyMbhNxIFxsxScCErVlsT6k5tAxNygiKi/DFMcrMCXL5I2Vu/NkDJqi2ULBhZE87s08NVCFCeiDwsIjy3NZ0e0tkphEHOvg9x4JZLeBkG8VHqQDSNXBJEQvoYQhusKs73qGd0VVplrq19nexcL7LCEblOZNz8Kq51O/nT2fNUoAk4GmSZfYOyJYbvS6Xlgi+HuUIePBhNXggdGXHNQPYFwHBJ2bW4h/385QRhm3ESS18GSod0TgxumG+2wjvJw2kp8VxFdYyDJzZEIJUpFrJtr+WZ95vYbva/VIsLetkpIHT1AEt01UlkqA9nENGsTCFr2Fv9neoWXcMbU="
+      - "chat.freenode.net#aanoaa"
   # email: false
