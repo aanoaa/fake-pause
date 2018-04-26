@@ -4,15 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+- use $TRAVIS_TAG for build docker image
+
 ## [v0.0.6] - Thu, 26 Apr 2018 15:03:23 +0900
 
 ### Changed
-
 - Build only pushed tags
 
 ## [v0.0.5] - Thu, 26 Apr 2018 14:55:19 +0900
 
 ### Added
-
 - docker image build on travis ci
 - Changes file
