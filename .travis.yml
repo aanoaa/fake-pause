@@ -16,7 +16,13 @@ notifications:
   irc:
     channels:
     - irc.silex.kr#silex
-    nick: travisci
+    template:
+      - "%{repository} (%{commit}: %{author}): %{message}"
+      - "More info : %{build_url}"
+    on_success: always
+    on_failure: always
+    use_notice: false
+    skip_join: false
     password:
       secure: YPZJXU1buSCwRg3NpOWi2vfb+/A9TKW5BOdkmv9bemTeE4DaBh9R5+BHyu0AS9Fofl4oxOQToKtktZprpiXmtNwhXcfyEqVxWl6uRUGTjkB2ZDV/As4f3eFVEBahWKNK4m3uMrhTCcnsLt9KDh6wXzgFbR2J4bGY3aNzWb1XmfsQQZ7w1GtRv3InKxUmv5RND2cXDpbrZCBWA9zQXJgcXBQDSM7qdNBzqRM3uhFlJjzhUv12UPtLYiPpTIXLkLxFjitV6jHRiH89uWSowM620Wp1ypz82sVnCmVX51/V2pp56gMar2pZFlxVkM1kSyDU/SsG2lOtJOL52efz2ZcXI1w2lGUWrh5uUbB8djdnihmJKOMpQ7ExfGiD80qVoGqgrljGANY0Y9NFcE1pl7C+ZBAm1WNXeeQQBqRBXzNXlAygyj2JIe1zeMEawZUFqdcIb9FRMzGTqVlWzDieNxWQe5yDc/+UP08Pp7Y9N+h92af6Ek6KDWOgQml5hnE4Q2JKGMAOv4ulbmVm71aUO8y7MGgDKWVXFSrHO1i7BRO4MwOXUcpzIVkEdAxJUrNlcAoujYRG9y4dYhdTGZlkZKWMYHndIRFpnjV5f4Km7bkB9ihgDRYYcqoAQeNPjakuGxW56AvhAVho/PFtizGLz/doWEEiM2bEQxcY+wtmekY8pw4=
   email: false
