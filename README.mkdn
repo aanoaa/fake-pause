@@ -1,3 +1,7 @@
+# fake-pause #
+
+[![Build Status](https://travis-ci.org/aanoaa/fake-pause.png)](https://travis-ci.org/aanoaa/fake-pause)
+
 RUN
 ----
 
