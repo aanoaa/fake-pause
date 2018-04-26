@@ -11,7 +11,7 @@ after_success:
 notifications:
   irc:
     channels:
-    - irc://irc.silex.kr:6667#silex
+    - ircs://irc.silex.kr:6667#silex
     template:
       - "%{build_url}"
     password:
