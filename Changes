@@ -4,6 +4,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [v0.0.8] - Thu, 26 Apr 2018 15:15:31 +0900
+
+### Changed
+- interpolate $TRAVIS_TAG
+
 ## [v0.0.7] - Thu, 26 Apr 2018 15:09:25 +0900
 
 ### Changed
