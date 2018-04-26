@@ -11,11 +11,6 @@ after_success:
 notifications:
   irc:
     channels:
-      - irc.silex.kr#silex
-      - irc.silex.kr:6667#silex
-      - irc://irc.silex.kr#silex
-      - irc://irc.silex.kr:6667#silex
-      - ircs://irc.silex.kr#silex
-      - ircs://irc.silex.kr:6667#silex
+    - ircs://irc.silex.kr:6667#silex
     password:
-      secure: "LAnreBwAM1C3iQKapsewGHMTQzQgjxry2V1Lut82a55KxV8dcjyCjOhTuKxoEJvP3oysQ+9ppJW9JcBWlTXVbm10ncmjwupaHOTyk2zRWDA68q8uhVf2A1BEr9NKUsN5mhBfKZVlv2O4N4Vm9jWAUc5RqktaPXeBJIUUz+G560JvH3IXcuuTnX7ZzzK3ISUQnPezsIHz9pMjYdkByzgffT0CpPCawhfpoicjLoLihE37G8ptK9NIwYgOG5FtWQCQ23Mq12FkxFNvlpZDIsk2S940wHkVNKuZauAKPGxx1c1Ho2GHFlVr0N2R3sUMrnCmDuYjLCEUFsPemjC/A919yodDYHmrbLaDz31gLf8Hz+rxssBqsjTvy2vnyOYFCsgqll3CtDkUpND6zx1Xrrpb9LvoGvR/IfRxccxUTMRyycg0VLWBOgbvuUJMSXmKgCRu3xcg1H5hALagIkz+dS0i7bq7MuZg1mFyxDh9/A/vSmy5O4O+JzQ0BeKz4Y9ob0YmjIM7TpY/BZzLK0/eRT09BCDaOMGbSqhXzIXwwhu3bF0rvAArWNzl0oFhHTywsOS7O8U1hgKJLcHJYzw/CeE2x1DkgaLHKWbRxUfwb/k8+7ZJpERWMRgXQD9sl+8xx8/TCHKyAMxwAGSQaddMVrtubolOXqYnZqsJjBTfSYZI9XY="
+      secure: dX6kqPIymIwp451TFgkKHQo9zESwoMVB1sRKXfOgfN0jyr9fkkZdYnp4jEG/7zrjk2JQy5MuVmDqUuEObBAB5HCPwy5vNusYIojPUuv7rlNoXzTZysNin2mCf8FCrVdH/b0JR3vZE8jS4Euk7iFZoaZDF1aVU3TQunA22BhzEqCvv2bNwURo9xId2F+5Tmn2iciXdl+n/SDFsk9EVLRCMeS8o7rxHmkowdbtqx9Q4dhk4oUQ0bLEzXWjnvIN+ZPJ+Vozb1PqImqXj+gbFLOpbdP1S8Ob5uBWR6p/Lf2Bphm696PYFrELXnniPD9zdfVyuNVaQL05au1NG/2RsySRJ2QHHaM94tERN9KIrKU3+4NRWpA80BnNAAJSlQXxw4dzUNF9BGLxwwp4MIEewgPBsEnM4Fa0u3DOwC/5tQ55VDQIFGBh/Z2so8tBojGQwTC29+QrbNWkJsUBExnHOHM2fhZqzON4FoQDR6uCmxPmRBNMB4nYTPFW2SQdh+0PCFmkklPnb2w4/wb/HJAEdrpKN26d2cPwaBwOpiEs6H93aaNGMUbDnZEf2sGJ0s22Ea3QZl5zXn9JeA9pSsfbPBo1XIhRDWQ344IRnhyVr3g6KaSGJQAeTdd8FJSJGja1k5Vp/4sVs1sRfQyXaynRU/itnnzizU6A1Rp/h7Sv1SqwihA=
