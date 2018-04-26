@@ -1,10 +1,8 @@
+if: tag IS present
 sudo: required
 language: perl
 services:
 - docker
-branches:
-  only:
-  - "/^v\\d+\\.\\d+\\(\\.\\d+)?(-\\S*)?$/"
 install:
 - echo "Skip install"
 script:
