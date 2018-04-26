@@ -4,6 +4,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+- Dockerfile base image registry
+
 ## [v0.0.8] - Thu, 26 Apr 2018 15:15:31 +0900
 
 ### Changed
