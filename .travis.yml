@@ -6,16 +6,17 @@ services:
 install:
 - echo "Skip install"
 script:
-- echo "Skip test; aanoaa/fake-pause:$TRAVIS_TAG"
+- echo "Skip test"
 after_success:
 - docker --version
-- docker build -t "aanoaa/fake-pause:$TRAVIS_TAG" .
-- docker tag "aanoaa/fake-pause:$TRAVIS_TAG" "registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG"
-- docker push "registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG"
+- docker build -t aanoaa/fake-pause:$TRAVIS_TAG .
+- docker tag aanoaa/fake-pause:$TRAVIS_TAG registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
+- docker push registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
 notifications:
   irc:
-    matrix:
+    channels:
     - irc.silex.kr#silex
+    nick: travisci
     password:
-      secure: ix+zzgdMZ7T/pfm1ojLtZrbmcHDSzDJISNzPyjLmDTTWATuBRv/hXiNZaBjeW9O1pV8CjrDH2Z+lqdOU++dr0ZUNJpA6Vw1hqgqbKi+W1ga+89xA9YrUMzZ6VF15fQHj9FkzfLc/wShbFKiWjP0qdEEkWhwoJ6588QxIzj3HntYB7ew1bxK8NiJ06h/EItH+Hu1It2GDh21WgIggZGReTgre0srdtkIuDmfzJQWrM86ZdQl4vkKg0ovM13tVHRpXYucL2sey0MsHo6F4c+ZlDx4rXYY/1jU7M+R6ANAQ6JdQx7LhVw66efzghA+eiTmnUFOPnTRFCfXaCaUaVTX9Uo/7Cz7ocROKMdUdeNqKTr/RUM31oQ6hQe04MpN/6bzFjARMwMh4osUAv6XD2e8TZVkf5truP1W2+4INlHNXoSc4pEmzGh0BsDnSPgdrK6+pGOoRq4k27xwOCqdpR9wEpQ96+Xxrt1rHw37LQV4vBA5EOS3isCRk7h5F36tJIWr3f7+l1GrknP0S6lTSG8kppHKW2ctKIKU7sr6pVKR/XV92jGiB0CGP+MQOjNwjlGuytuy3e2s1tjLqCkrhdrwpJGJsdVLy/Nhi0WdFZ6wHt4Dn10ABo7yNaiJ3xgmtgVie8CVgdM6mBbZHXyq1HITiP6NdkdPGwlfvHYpnUkGbRV0=
+      secure: YPZJXU1buSCwRg3NpOWi2vfb+/A9TKW5BOdkmv9bemTeE4DaBh9R5+BHyu0AS9Fofl4oxOQToKtktZprpiXmtNwhXcfyEqVxWl6uRUGTjkB2ZDV/As4f3eFVEBahWKNK4m3uMrhTCcnsLt9KDh6wXzgFbR2J4bGY3aNzWb1XmfsQQZ7w1GtRv3InKxUmv5RND2cXDpbrZCBWA9zQXJgcXBQDSM7qdNBzqRM3uhFlJjzhUv12UPtLYiPpTIXLkLxFjitV6jHRiH89uWSowM620Wp1ypz82sVnCmVX51/V2pp56gMar2pZFlxVkM1kSyDU/SsG2lOtJOL52efz2ZcXI1w2lGUWrh5uUbB8djdnihmJKOMpQ7ExfGiD80qVoGqgrljGANY0Y9NFcE1pl7C+ZBAm1WNXeeQQBqRBXzNXlAygyj2JIe1zeMEawZUFqdcIb9FRMzGTqVlWzDieNxWQe5yDc/+UP08Pp7Y9N+h92af6Ek6KDWOgQml5hnE4Q2JKGMAOv4ulbmVm71aUO8y7MGgDKWVXFSrHO1i7BRO4MwOXUcpzIVkEdAxJUrNlcAoujYRG9y4dYhdTGZlkZKWMYHndIRFpnjV5f4Km7bkB9ihgDRYYcqoAQeNPjakuGxW56AvhAVho/PFtizGLz/doWEEiM2bEQxcY+wtmekY8pw4=
   email: false
