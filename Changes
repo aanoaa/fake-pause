@@ -4,6 +4,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [v0.0.10] - Thu, 26 Apr 2018 15:40:21 +0900
+
 ### Changed
 - Adjust .travis.yml options
 
