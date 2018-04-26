@@ -1,4 +1,3 @@
-# if: tag IS present
 sudo: required
 language: perl
 services:
@@ -9,11 +8,10 @@ script:
 - echo "Skip test"
 after_success:
 - docker --version
-# - docker build -t aanoaa/fake-pause:$TRAVIS_TAG .
-# - docker tag aanoaa/fake-pause:$TRAVIS_TAG registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
-# - docker push registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
 notifications:
   irc:
     channels:
-    - chat.freenode.net#aanoaa
-    - irc.freenode.net#aanoaa
+    - irc.silex.kr:6667#silex
+    - ircs://irc.silex.kr:6667#silex
+    password:
+      secure: "DmVl7L4G68n4CMvZdcG5xARFNhP7VsXmAmT1PT1hA730D3Lm57DNpOB4ubqj1+RM84p4CQOKmjhAdFqAmRwcoEQlu1tHVOk02yJEvKSm1aWifTMaMJX1OHHTcnbJQlGDtHGH9O0XIYV6oSRI88NPrr2Z3tHW5JhR2DZ7NsDt+5dUxVtTc4uSq8uIZA/7Y9W5Un/PfbetJHslESe9dFvRVTrvdCIFdDoUYAR/Ew/+ZQ8aFsKAPx9lt3naH36uVFNOevhoU9p/0HIQMVQBcyLCI+vKxoz4kfn3jvJoQJLcg22DqjHowRv+A8VI61hYDciSNhlhnLVZJIN0YaAR1mN6VKq7hUzfl+F1ktxrIddCN17/MOa4jDXq+faVsV4KYEz2KAsS9Q4Wm0miBMom0ZdokpmstTNLXrBc154QSVO+p1Zyc+Oh67e402MFpyDDXq9CFurVsemoGKquVrRKBa6+bPd/PNJjXf/DuCeZtU2fxppALbLYGlmYnMzTlN/DHr5malfI1ZG/RwdhSAFLCIy7AlP4podYWGk+/b9QH1yJlXH7SjZbJZr4B7nmEAGqorSUrCMdQf0SnQmIW22uY7/CBLJKsQYZNSfPorf942v+xtnZbMqufU4U89ms6svcOWD1sQNs0s7oUVMr4U5UtqSAgz5VWvjALXD+aijx0oWBeAE="
