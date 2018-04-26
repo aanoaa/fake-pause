@@ -15,6 +15,5 @@ after_success:
 notifications:
   irc:
     channels:
-    - ircs://irc.silex.kr:6667#silex
-    password:
-      secure: CZ3JzkLJPyXYCFpzXsbKwMplYYebYkUSJUGZcMWyJD6UxH33P8ITzUOcBJTkXVBkq7vRBTZTXIe9mIORnBwNVFV6QTjsD964c0PnZ66tfuILTZ+Q7jlE/cdrwGdIQASbuiP97v9GmcMJNLNOO6FHt/9NHtoJFEtTMn+EjcIPJXgoRLH1CkGfRpVZZ1o6J0QaDnZ4vMXmWksx6c2pcXkOnjMu38wIy9MYCDE4AHj68eSUVmClIRYLXYwBlsuWbKIu6sIJ/BiiFPhh3ciuixawZrHm5364K4uciLzhjQ019DeysgZGf0KdGAHG4pmsjeW3OjKvUSfzNJ8T9CzBXQKeYev0BTJK8hU9UGndewrma88slWFxaguSF1BdV/K2lK60wNn/3nP9C1QHiSdT28IeffAWPXOAPW5sMjn6Wz2ul6X5GjRznEgibxzOq1GsRD9132+ZeYRkgLxqhQCS7c/3BGf9pZ9UQoTVtkP71LAVj70XCXuURkqo1pPm1HlAkwqLUPZvobua+g8DgQdY+SP5ti9vjVpcWlhDdrVAs7pPYyXUIS5Ue5LRbyUpHZJavdOVpfv1HLqKOXfgnxu1yVkA0IgcNGa3uflgycps0v+FBGnOmAMcCWRI4psUqlazdXSOHvQwBSZwwcP9Q2sAyVnDrLFjvTXZAgEMCe4DHZFwq4I=
+    - chat.freenode.net#aanoaa
+    - irc.freenode.net#aanoaa
