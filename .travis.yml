@@ -9,9 +9,9 @@ script:
 - echo "Skip test; aanoaa/fake-pause:$TRAVIS_TAG"
 after_success:
 - docker --version
-- docker build -t aanoaa/fake-pause:$TRAVIS_TAG .
-- docker tag registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
-- docker push registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
+- docker build -t "aanoaa/fake-pause:$TRAVIS_TAG" .
+- docker tag "aanoaa/fake-pause:$TRAVIS_TAG" "registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG"
+- docker push "registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG"
 notifications:
   irc:
     matrix:
