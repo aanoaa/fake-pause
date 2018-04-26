@@ -15,8 +15,8 @@ after_success:
 notifications:
   irc:
     channels:
-      - irc.freenode.net#aanoaa
-      # - "irc.silex.kr#silex"
+      - chat.freenode.net#aanoaa
+      # - "irc.silex.kr:6667#silex"
       # - "irc://irc.silex.kr#silex"
       # - "ircs://irc.silex.kr#silex"
     use_notice: true
