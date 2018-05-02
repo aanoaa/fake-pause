@@ -1,18 +1,37 @@
+if: tag IS present
+
 sudo: required
+
 language: perl
+
 services:
-- docker
+  - docker
+
 install:
-- echo "Skip install"
+  - echo "Skip install"
+
 script:
-- echo "Skip test"
+  - echo "Skip test"
+
 after_success:
-- docker --version
+  - docker --version
+  - docker build -t aanoaa/fake-pause:$TRAVIS_TAG .
+  - docker tag aanoaa/fake-pause:$TRAVIS_TAG registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
+  - docker push registry.theopencloset.net/aanoaa/fake-pause:$TRAVIS_TAG
+
 notifications:
-  irc:
-    channels:
-    - ircs://irc.silex.kr:6667#silex
-    use_notice: true
-    skip_join: true
-    password:
-      secure: dX6kqPIymIwp451TFgkKHQo9zESwoMVB1sRKXfOgfN0jyr9fkkZdYnp4jEG/7zrjk2JQy5MuVmDqUuEObBAB5HCPwy5vNusYIojPUuv7rlNoXzTZysNin2mCf8FCrVdH/b0JR3vZE8jS4Euk7iFZoaZDF1aVU3TQunA22BhzEqCvv2bNwURo9xId2F+5Tmn2iciXdl+n/SDFsk9EVLRCMeS8o7rxHmkowdbtqx9Q4dhk4oUQ0bLEzXWjnvIN+ZPJ+Vozb1PqImqXj+gbFLOpbdP1S8Ob5uBWR6p/Lf2Bphm696PYFrELXnniPD9zdfVyuNVaQL05au1NG/2RsySRJ2QHHaM94tERN9KIrKU3+4NRWpA80BnNAAJSlQXxw4dzUNF9BGLxwwp4MIEewgPBsEnM4Fa0u3DOwC/5tQ55VDQIFGBh/Z2so8tBojGQwTC29+QrbNWkJsUBExnHOHM2fhZqzON4FoQDR6uCmxPmRBNMB4nYTPFW2SQdh+0PCFmkklPnb2w4/wb/HJAEdrpKN26d2cPwaBwOpiEs6H93aaNGMUbDnZEf2sGJ0s22Ea3QZl5zXn9JeA9pSsfbPBo1XIhRDWQ344IRnhyVr3g6KaSGJQAeTdd8FJSJGja1k5Vp/4sVs1sRfQyXaynRU/itnnzizU6A1Rp/h7Sv1SqwihA=
+  email:
+    # recipients:
+    #   - staff@silex.kr
+    on_success: change # default: change
+    on_failure: always # default: always
+
+  ## irc noti 는 irc.silex.kr 에서 동작하지 않음
+  ## irc 서버의 버전문제인듯 (ngircd 22-2)
+  ## Apr 26 17:45:30 ralph ngircd[333]: Request too long (connection 13): 704 bytes (max. 512 expected)!
+  ## jessie 에서의 latest 버전을 사용중이라서 더 올릴 수 없음
+  # irc:
+  #   channels:
+  #     - ircs://irc.silex.kr:6667#silex
+  #   password:
+  #     secure: dX6kqPIymIwp451TFgkKHQo9zESwoMVB1sRKXfOgfN0jyr9fkkZdYnp4jEG/7zrjk2JQy5MuVmDqUuEObBAB5HCPwy5vNusYIojPUuv7rlNoXzTZysNin2mCf8FCrVdH/b0JR3vZE8jS4Euk7iFZoaZDF1aVU3TQunA22BhzEqCvv2bNwURo9xId2F+5Tmn2iciXdl+n/SDFsk9EVLRCMeS8o7rxHmkowdbtqx9Q4dhk4oUQ0bLEzXWjnvIN+ZPJ+Vozb1PqImqXj+gbFLOpbdP1S8Ob5uBWR6p/Lf2Bphm696PYFrELXnniPD9zdfVyuNVaQL05au1NG/2RsySRJ2QHHaM94tERN9KIrKU3+4NRWpA80BnNAAJSlQXxw4dzUNF9BGLxwwp4MIEewgPBsEnM4Fa0u3DOwC/5tQ55VDQIFGBh/Z2so8tBojGQwTC29+QrbNWkJsUBExnHOHM2fhZqzON4FoQDR6uCmxPmRBNMB4nYTPFW2SQdh+0PCFmkklPnb2w4/wb/HJAEdrpKN26d2cPwaBwOpiEs6H93aaNGMUbDnZEf2sGJ0s22Ea3QZl5zXn9JeA9pSsfbPBo1XIhRDWQ344IRnhyVr3g6KaSGJQAeTdd8FJSJGja1k5Vp/4sVs1sRfQyXaynRU/itnnzizU6A1Rp/h7Sv1SqwihA=
